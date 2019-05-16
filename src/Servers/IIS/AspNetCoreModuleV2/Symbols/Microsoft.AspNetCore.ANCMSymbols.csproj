@@ -16,7 +16,7 @@
     <NativeProjectReference Include="$(MSBuildThisFileDirectory)..\..\AspNetCoreModuleV2\AspNetCore\AspNetCore.vcxproj" Platform="Win32" />
   </ItemGroup>
 
-  <Target Name="AddPackNativeComponents" BeforeTargets="_GetPackageFiles" Condition="$(PackNativeAssets) == 'true'">
+  <Target Name="AddPackNativeComponents" BeforeTargets="_GetPackageFiles" Condition="'$(PackNativeAssets)' == 'true'">
     <ItemGroup>
       <None Include="%(ShimComponents.DllLocation)"
             Pack="true"
